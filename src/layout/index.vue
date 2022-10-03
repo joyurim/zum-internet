@@ -1,13 +1,5 @@
 <template>
-  <div class="FrameworkWrap">
-    <div class="flex-1 flex flex-col">
-      <div class="content">
-        <div class="content__wrap">
-          <router-view />
-        </div>
-      </div>
-    </div>
-  </div>
+  <router-view />
 </template>
 
 <script>

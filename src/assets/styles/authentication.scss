@@ -1,0 +1,55 @@
+// welcome (인증) 화면 스타일
+
+.welcome {
+  height: 100vh;
+  background-color: white;
+  .hooper {
+    height: 85vh;
+    .hooper-slide {
+      @apply flex flex-col items-center justify-center;
+    }
+    .hooper-pagination {
+      padding: 0.75rem 0;
+      ::v-deep .hooper-indicators {
+        li {
+          @apply flex flex-col items-center;
+          .hooper-indicator {
+            width: 6px;
+            height: 6px;
+            margin: 0 4px;
+            border-radius: 50%;
+            background-color: $karl;
+            &.is-active {
+              width: 20px;
+              border-radius: 10px;
+              background-color: $clooney;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__img {
+    margin-top: 4.88rem;
+  }
+  &__text {
+    padding: 1rem;
+    color: $dustyOrange;
+    font-size: 2.13rem;
+    font-weight: bold;
+    line-height: 2.63rem;
+    text-align: center;
+  }
+  &__btn-box {
+    height: 15vh;
+    padding: 1rem;
+    .btn_started {
+      width: 100%;
+      padding: 1rem;
+      color: white;
+      font-size: 1.06rem;
+      font-weight: 700;
+      background-color: $dustyOrange;
+    }
+  }
+}
