@@ -10,9 +10,9 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'HomeIndex',
+        name: 'InvestmentHome',
         component: () =>
-          import(/* webpackChunkName: "Layout" */ '@/views/index.vue'),
+          import(/* webpackChunkName: "Layout" */ '@/views/main/index.vue'),
       },
     ],
   },
