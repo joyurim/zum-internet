@@ -10,27 +10,9 @@ const routes = [
     children: [
       {
         path: '',
-        name: 'Slider',
+        name: 'HomeIndex',
         component: () =>
-          import(
-            /* webpackChunkName: "Layout" */ '@/views/authentication/Slider.vue'
-          ),
-      },
-      {
-        path: '/login',
-        name: 'Login',
-        component: () =>
-          import(
-            /* webpackChunkName: "Layout" */ '@/views/authentication/Login.vue'
-          ),
-      },
-      {
-        path: '/login-form',
-        name: 'LoginForm',
-        component: () =>
-          import(
-            /* webpackChunkName: "Layout" */ '@/views/authentication/LoginForm.vue'
-          ),
+          import(/* webpackChunkName: "Layout" */ '@/views/index.vue'),
       },
     ],
   },
