@@ -209,3 +209,15 @@
   box-shadow: -1px 5px 8px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
+
+.prfrm__blue {
+  .accordion__title {
+    .prfrm {
+      color: #4778ff;
+      .prfrm--percent {
+        border-color: rgba(71, 120, 255, 0.2);
+        background-color: rgba(71, 120, 255, 0.1);
+      }
+    }
+  }
+}

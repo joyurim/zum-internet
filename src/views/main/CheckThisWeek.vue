@@ -42,7 +42,7 @@
         </li>
         <li>
           <span ref="thursday" class="stock__date">목 5.19</span>
-          <CheckWeekItem :itemInfo="thursItemInfo" />
+          <CheckWeekItem :itemInfo="thursItemInfo" class="prfrm__blue" />
           <CheckWeekItem :itemInfo="thursIpoItemInfo" />
         </li>
         <li>
