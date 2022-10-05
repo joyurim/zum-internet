@@ -7,12 +7,24 @@
         <button type="button" class="heading__side">더보기</button>
       </div>
     </article>
+
+    <!-- 컨텐츠 영역 -->
+    <article class="invst">
+      <invstCardItem />
+      <invstCardItem />
+      <invstCardItem />
+      <invstCardItem />
+    </article>
   </section>
 </template>
 
 <script>
+import invstCardItem from '@/components/investment/invstCardItem'
 export default {
   name: 'InvestmentSecrets',
+  components: {
+    invstCardItem,
+  },
 }
 </script>
 

@@ -74,6 +74,7 @@ body {
 
 .text {
   height: 5000px;
+  overflow-y: auto;
   li {
     .box {
       width: 100%;
@@ -83,6 +84,92 @@ body {
       color: white;
       text-align: center;
       background: #333;
+    }
+  }
+}
+
+/* 고수들의 투자비법 */
+.invst {
+  overflow-x: auto;
+  width: 100%;
+  padding: 1rem 0 1.625rem 1rem;
+  white-space: nowrap;
+  background-color: $bgDarkGrey;
+  // 가로 스크롤은 적용되지만 보이지 않도록 스타일 처리
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__card {
+    display: inline-block;
+    width: 10rem;
+    height: 13.5rem;
+    padding: 0.875em 0.875em 0.75rem;
+    margin-right: 0.5rem;
+    color: #edeff2;
+    border: 1px solid rgba(69, 74, 84, 0.5);
+    border-radius: 10%;
+    background-color: $charcoalGrey;
+    box-sizing: border-box;
+
+    .tag {
+      padding: 0.1875rem 0.625rem;
+      color: white;
+      font-size: 0.8125rem;
+      letter-spacing: -0.26px;
+      border-radius: 0.25rem;
+      &--domestic {
+        background-color: $lightGreyBlue-50;
+      }
+      &--overseas {
+        background-color: $rosyPink-50;
+      }
+      &--trend {
+        background-color: $paleTeal-50;
+      }
+    }
+
+    &--title {
+      padding: 0.75rem 0 1.25rem;
+      letter-spacing: -0.32px;
+      white-space: break-spaces;
+      border-bottom: 1px solid rgba(69, 74, 84, 0.5);
+    }
+
+    .profile {
+      @apply flex items-center;
+      &__img {
+        overflow: hidden;
+
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #f9fafb;
+        border-radius: 50%;
+        box-sizing: border-box;
+
+        &--active {
+          position: absolute;
+          right: -0.469rem;
+          bottom: 0;
+          display: block;
+          width: 0.9375rem;
+          height: 0.9375rem;
+          border-radius: 50%;
+          background-color: #3384ff;
+        }
+      }
+      &__text-box {
+        margin-left: 0.9375rem;
+        &--name {
+          font-size: 0.9375rem;
+        }
+        &--active {
+          color: #3384ff;
+          font-size: 0.8125em;
+        }
+      }
     }
   }
 }
