@@ -49,6 +49,12 @@
           <span ref="friday" class="stock__date">금 5.20</span>
           <CheckWeekItem :itemInfo="friEventItemInfo" />
         </li>
+        <li>
+          <span ref="saturday" class="stock__date">토 5.21</span>
+        </li>
+        <li>
+          <span ref="sunday" class="stock__date">일 5.22</span>
+        </li>
       </ul>
     </article>
   </section>
@@ -109,14 +115,17 @@ export default {
         price: '1,234,000',
         contentLlist: [
           {
+            id: 1,
             label: '주관사',
             amount: '미래에셋증권',
           },
           {
+            id: 2,
             label: '개인청약',
             amount: '22. 3. 14 - 22. 3. 15',
           },
           {
+            id: 3,
             label: '발표일',
             amount: '22.03.14',
           },
@@ -132,10 +141,12 @@ export default {
         percent: '+23.7',
         contentLlist: [
           {
+            id: 1,
             label: '예상 주당순이익',
             amount: '742억',
           },
           {
+            id: 2,
             label: '예상 매출',
             amount: '5,180억',
           },
@@ -160,14 +171,17 @@ export default {
         price: '1,234,000',
         contentLlist: [
           {
+            id: 1,
             label: '주관사',
             amount: '신한금융투자',
           },
           {
+            id: 2,
             label: '개인청약',
             amount: '22. 3. 14 - 22. 3. 15',
           },
           {
+            id: 3,
             label: '발표일',
             amount: '22.03.14',
           },
@@ -183,10 +197,12 @@ export default {
         percent: '+23.7',
         contentLlist: [
           {
+            id: 1,
             label: '예상 주당순이익',
             amount: '247억',
           },
           {
+            id: 2,
             label: '예상 매출',
             amount: '3,933억',
           },
@@ -201,14 +217,17 @@ export default {
         price: '84,200',
         contentLlist: [
           {
+            id: 1,
             label: '주관사',
             amount: '신한금융투자',
           },
           {
+            id: 2,
             label: '개인청약',
             amount: '22. 3. 14 - 22. 3. 15',
           },
           {
+            id: 3,
             label: '발표일',
             amount: '22.03.14',
           },
