@@ -29,17 +29,32 @@
 <script>
 export default {
   name: 'invstCardItem',
-  props: {},
-  data() {
-    return {
-      tagNm: '국내증시동향',
-      invstTitle:
-        '글로벌 부동산 메가 트렌드, 단독주택(Single-Family Rental) 투자',
-      invstImg: require('@/assets/img/profile_img_01.jpg'),
-      invstAlt: '뉴히어로 프로필 사진',
-      nickNm: '뉴히어로',
-    }
+  props: {
+    tagNm: {
+      type: String,
+      required: false,
+    },
+    invstTitle: {
+      type: String,
+      required: false,
+    },
+    invstImg: {
+      type: String,
+      required: false,
+    },
+    invstAlt: {
+      type: String,
+      required: false,
+    },
+    nickNm: {
+      type: String,
+      required: false,
+    },
   },
+  data() {
+    return {}
+  },
+  methods: {},
 }
 </script>
 

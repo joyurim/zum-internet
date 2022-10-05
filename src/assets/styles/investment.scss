@@ -101,9 +101,13 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
-
+  &__list {
+    li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
   &__card {
-    display: inline-block;
     width: 10rem;
     height: 13.5rem;
     padding: 0.875em 0.875em 0.75rem;
@@ -112,6 +116,7 @@ body {
     border: 1px solid rgba(69, 74, 84, 0.5);
     border-radius: 10%;
     background-color: $charcoalGrey;
+
     box-sizing: border-box;
 
     .tag {
@@ -132,6 +137,7 @@ body {
     }
 
     &--title {
+      min-height: 7.3125rem;
       padding: 0.75rem 0 1.25rem;
       letter-spacing: -0.32px;
       white-space: break-spaces;
@@ -142,7 +148,6 @@ body {
       @apply flex items-center;
       &__img {
         overflow: hidden;
-
         width: 2rem;
         height: 2rem;
         border: 1px solid #f9fafb;
@@ -170,6 +175,60 @@ body {
           font-size: 0.8125em;
         }
       }
+    }
+  }
+}
+
+.invstPopup {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-color: $charcoalGrey;
+  header {
+    padding: 1rem 1rem 0 1rem;
+    text-align: right;
+  }
+  &__close {
+    width: 1rem;
+    height: 1rem;
+    background: url(@/assets/img/icon_close.png) no-repeat center center / cover;
+  }
+  .content-wrap {
+    padding: 1rem;
+    color: #edeff2;
+    .content-haeader {
+      .tag {
+        padding: 0.1875rem 0.625rem;
+        color: white;
+        font-size: 0.8125rem;
+        letter-spacing: -0.26px;
+        border-radius: 0.25rem;
+        &--domestic {
+          background-color: $lightGreyBlue-50;
+        }
+        &--overseas {
+          background-color: $rosyPink-50;
+        }
+        &--trend {
+          background-color: $paleTeal-50;
+        }
+      }
+      &__title {
+        padding: 0.75rem 0;
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: -0.32px;
+        border-bottom: 1px solid rgba(69, 74, 84, 0.5);
+      }
+      .profile-name {
+        padding: 0.5rem 0;
+        font-size: 0.75rem;
+        text-align: right;
+      }
+    }
+    .content {
+      overflow-y: auto;
+      line-height: 1.5;
     }
   }
 }
