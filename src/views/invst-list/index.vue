@@ -1,32 +1,31 @@
 <template>
-  <section aria-label="고수들의 투자 비법!">
+  <section class="invstList">
     <!-- 타이틀 영역 -->
     <article class="heading">
       <div class="heading__inner">
         <h1 class="heading__title">고수들의 투자 비법!</h1>
-        <button type="button" class="heading__side" @click="moveInvstList">
-          더보기
+        <button type="button" class="heading__side" @click="moveGoHome">
+          홈으로
         </button>
       </div>
     </article>
 
     <!-- 컨텐츠 영역 -->
-    <article class="invst">
-      <ul class="invst__list">
-        <li
-          v-for="(invst, index) in invstList"
-          :key="`invst-${invst.id}`"
-          @click="openInvstPopup()"
-        >
-          <invstCardItem
-            :tagNm="invst.tagNm"
-            :invstTitle="invst.title"
-            :invstImg="invst.imgSrc"
-            :invstAlt="invst.imgAlt"
-            :nickNm="invst.nickNm"
-          />
-        </li>
-      </ul>
+    <article class="invstList__inner">
+      <div
+        v-for="(invst, index) in invstList"
+        :key="`invst-${invst.id}`"
+        @click="openInvstPopup()"
+      >
+        <invstCardItem
+          :tagNm="invst.tagNm"
+          :invstTitle="invst.title"
+          :invstImg="invst.imgSrc"
+          :invstAlt="invst.imgAlt"
+          :nickNm="invst.nickNm"
+          class="mb-2.5"
+        />
+      </div>
     </article>
     <PopupInvst v-if="popup.visible" @close="closedInvstPopup" />
   </section>
@@ -35,9 +34,8 @@
 <script>
 import invstCardItem from '@/components/investment/InvstCardItem'
 import PopupInvst from '@/components/investment/PopupInvst'
-
 export default {
-  name: 'InvestmentSecrets',
+  name: 'InvestmenList',
   components: {
     invstCardItem,
     PopupInvst,
@@ -77,8 +75,8 @@ export default {
     }
   },
   methods: {
-    moveInvstList() {
-      this.$router.push('invst-list')
+    moveGoHome() {
+      this.$router.push('/')
     },
     openInvstPopup() {
       this.popup.visible = true

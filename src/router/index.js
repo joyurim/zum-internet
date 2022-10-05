@@ -14,6 +14,14 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "Layout" */ '@/views/main/index.vue'),
       },
+      {
+        path: '/invst-list',
+        name: 'InvestmenList',
+        component: () =>
+          import(
+            /* webpackChunkName: "Layout" */ '@/views/invst-list/index.vue'
+          ),
+      },
     ],
   },
 ]
