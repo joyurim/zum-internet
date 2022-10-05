@@ -1,0 +1,47 @@
+// 공통 스타일
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard.css');
+* {
+}
+
+body {
+  min-width: 320px;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.313;
+  background-color: $bgBlack;
+}
+
+.heading {
+  padding: 0 0.75rem 0 1rem;
+  background-color: $bgDarkGrey;
+  &__inner {
+    @apply flex items-center justify-between;
+    height: 3.25rem;
+    border-bottom: 1px solid $charcoalGrey;
+  }
+  &__title {
+    color: #edeff2;
+    font-size: 1.125rem;
+    font-weight: bold;
+    letter-spacing: -0.18px;
+  }
+  &__side {
+    color: #a7acb9;
+    font-size: 0.875rem;
+    letter-spacing: -0.28px;
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      margin-left: 2px;
+      background: url(~@/assets/img/icon_arrow_right.svg) no-repeat center
+        center / cover;
+      vertical-align: middle;
+    }
+  }
+}

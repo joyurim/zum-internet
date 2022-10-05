@@ -19,5 +19,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/styles/investment.scss';
+@import '@/assets/styles/common.scss';
 </style>

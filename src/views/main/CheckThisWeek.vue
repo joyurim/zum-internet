@@ -22,35 +22,49 @@
       </ul>
     </article>
 
-    <ul class="text">
-      <li>
-        <div class="box mt-4" ref="monday">컴포넌트1</div>
-      </li>
-      <li>
-        <div class="box" ref="tuesday">컴포넌트2</div>
-      </li>
-      <li>
-        <div class="box" ref="wednesday">컴포넌트3</div>
-      </li>
-      <li>
-        <div class="box" ref="thursday">컴포넌트4</div>
-      </li>
-      <li>
-        <div class="box" ref="friday">컴포넌트5</div>
-      </li>
-      <li>
-        <div class="box" ref="saturday">컴포넌트6</div>
-      </li>
-      <li>
-        <div class="box" ref="sunday">컴포넌트7</div>
-      </li>
-    </ul>
+    <article class="stock">
+      <ul class="stock__list">
+        <li>
+          <span ref="monday" class="stock__date stock__date--active">
+            월 5.16
+          </span>
+          <CheckWeekItem />
+        </li>
+        <li>
+          <span ref="tuesday" class="stock__date">화 5.17</span>
+          <CheckWeekItem />
+        </li>
+        <li>
+          <span ref="wednesday" class="stock__date">수 5.18</span>
+          <CheckWeekItem />
+        </li>
+        <li>
+          <span ref="thursday" class="stock__date">목 5.19</span>
+          <CheckWeekItem />
+        </li>
+        <li>
+          <span ref="friday" class="stock__date">금 5.20</span>
+          <CheckWeekItem />
+        </li>
+        <li>
+          <span ref="saturday" class="stock__date">토 5.21</span>
+          <CheckWeekItem />
+        </li>
+        <li>
+          <span ref="sunday" class="stock__date">일 5.22</span>
+          <CheckWeekItem />
+        </li>
+      </ul>
+    </article>
   </section>
 </template>
 
 <script>
+import CheckWeekItem from '@/components/check-week/CheckWeekItem'
+
 export default {
   name: 'CheckThisWeek',
+  components: { CheckWeekItem },
   data() {
     return {
       weekList: [
@@ -107,4 +121,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+@import '@/assets/styles/check-week.scss';
+</style>
