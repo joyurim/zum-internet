@@ -94,13 +94,14 @@
         @apply flex items-end;
         h2 {
           @apply truncate;
-          display: inline-block;
+          display: inline;
           font-size: 1.25rem;
           font-weight: 700;
         }
         span {
           display: inline-block;
-          margin-left: 0.375rem;
+          margin-left: 11px;
+          margin-bottom: 2px;
           color: #888e9a;
           font-size: 0.75rem;
           font-weight: normal;
@@ -173,6 +174,10 @@
             text-overflow: inherit;
             white-space: inherit;
           }
+          span {
+            margin-left: 6px;
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -187,10 +192,20 @@
       &--label {
         margin-right: 0.5rem;
         color: #888e9a;
+        font-size: 0.9375rem;
       }
       &--amount {
         color: #c6cad2;
+        font-size: 0.875rem;
       }
     }
   }
+}
+
+.is-sticky {
+  position: sticky;
+  top: -1px;
+  left: 0;
+  box-shadow: -1px 5px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
