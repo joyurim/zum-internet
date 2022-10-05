@@ -34,10 +34,10 @@
       <button type="button" class="btn-close"></button>
       <!-- 타이틀 영역 -->
       <div class="title" :class="{ 'title--event': tag.tagNm === '이벤트' }">
-        <h3>
+        <h2>
           {{ title }}
           <span>KOSDAQ</span>
-        </h3>
+        </h2>
         <span v-if="!toggleActive">KOSDAQ</span>
       </div>
       <!-- 공모가 or 현재가격 -->
@@ -55,14 +55,24 @@
     <!-- 아코디언 content 영역 -->
     <transition name="listOpen">
       <div class="accordion__content" v-if="toggleActive">
-        <div
-          v-for="(cont, id) in contentLlist"
-          :key="`item-${cont.id}`"
-          class="content-list"
-        >
-          <span class="content-list--label">{{ cont.label }}</span>
-          <span class="content-list--amount">{{ cont.amount }}</span>
+        <div v-if="tag.tagNm === '이벤트'" class="flex flex-col">
+          <h3 class="accordion__content--label mb-2.5">이벤트 내용</h3>
+          <p class="accordion__content--amount">
+            픽셀워치는 구글과 삼성이 공동 개발한 웨어러블용 운용체계(OS)
+            '웨어OS'로 구동되며, 자체 개발한 시스템온칩(Soc)를 탑재할 것으로
+            알려짐
+          </p>
         </div>
+        <template v-else>
+          <div
+            v-for="(cont, id) in contentLlist"
+            :key="`item-${cont.id}`"
+            class="content-list"
+          >
+            <span class="accordion__content--label">{{ cont.label }}</span>
+            <span class="accordion__content--amount">{{ cont.amount }}</span>
+          </div>
+        </template>
       </div>
     </transition>
   </article>
@@ -75,8 +85,8 @@ export default {
     return {
       toggleActive: false,
       tag: {
-        ipo: false,
-        tagNm: '실적',
+        ipo: true,
+        tagNm: '공모청약',
       },
       title: '엘지 라이프 사이언스 테크놀로지 센터',
       contentLlist: [

@@ -92,8 +92,7 @@
       }
       .title {
         @apply flex items-end;
-        padding-bottom: 0.375em;
-        h3 {
+        h2 {
           @apply truncate;
           display: inline-block;
           font-size: 1.25rem;
@@ -114,9 +113,10 @@
         }
       }
       // 공모가
-      .content-list {
+      .public {
         display: inline-block;
         padding: 0.3125rem 0.75rem;
+        margin-top: 0.3125rem;
         border-radius: 0.25rem;
         border: 1px solid rgba(103, 109, 121, 0.35);
         background-color: rgba(69, 74, 84, 0.6);
@@ -140,7 +140,7 @@
       }
       // 실적
       .prfrm {
-        padding-top: 0.3125rem;
+        margin-top: 0.3125rem;
         color: #ff3535;
         span {
           display: inline-block;
@@ -168,7 +168,7 @@
           display: inherit;
           align-items: inherit;
           padding-bottom: 0;
-          h3 {
+          h2 {
             overflow: inherit;
             text-overflow: inherit;
             white-space: inherit;
@@ -183,13 +183,13 @@
         span {
           font-size: 0.9375rem;
         }
-        &--label {
-          margin-right: 0.5rem;
-          color: #888e9a;
-        }
-        &--amount {
-          color: #c6cad2;
-        }
+      }
+      &--label {
+        margin-right: 0.5rem;
+        color: #888e9a;
+      }
+      &--amount {
+        color: #c6cad2;
       }
     }
   }
