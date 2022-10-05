@@ -172,6 +172,7 @@
       margin-right: 0;
       border-radius: 10px;
       &--title {
+        height: inherit;
         min-height: inherit;
       }
     }
