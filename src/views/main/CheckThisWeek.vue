@@ -24,16 +24,25 @@
 
     <ul class="text">
       <li>
-        <div class="box mt-4" ref="1">컴포넌트1</div>
+        <div class="box mt-4" ref="monday">컴포넌트1</div>
       </li>
       <li>
-        <div class="box" ref="2">컴포넌트2</div>
+        <div class="box" ref="tuesday">컴포넌트2</div>
       </li>
       <li>
-        <div class="box" ref="3">컴포넌트3</div>
+        <div class="box" ref="wednesday">컴포넌트3</div>
       </li>
       <li>
-        <div class="box" ref="4">컴포넌트4</div>
+        <div class="box" ref="thursday">컴포넌트4</div>
+      </li>
+      <li>
+        <div class="box" ref="friday">컴포넌트5</div>
+      </li>
+      <li>
+        <div class="box" ref="saturday">컴포넌트6</div>
+      </li>
+      <li>
+        <div class="box" ref="sunday">컴포넌트7</div>
       </li>
     </ul>
   </section>
@@ -46,42 +55,42 @@ export default {
     return {
       weekList: [
         {
-          id: 1,
+          id: 'monday',
           name: '월',
           date: '16',
         },
         {
-          id: 2,
+          id: 'tuesday',
           name: '화',
           date: '17',
         },
         {
-          id: 3,
+          id: 'wednesday',
           name: '수',
           date: '18',
         },
         {
-          id: 4,
+          id: 'thursday',
           name: '목',
           date: '19',
         },
         {
-          id: 5,
+          id: 'friday',
           name: '금',
           date: '20',
         },
         {
-          id: 6,
+          id: 'saturday',
           name: '토',
           date: '21',
         },
         {
-          id: 7,
+          id: 'sunday',
           name: '일',
           date: '22',
         },
       ],
-      activeItem: 1,
+      activeItem: 'monday',
     }
   },
   methods: {

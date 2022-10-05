@@ -1,4 +1,4 @@
-# zum-internet2
+# zum-internet
 
 ## Project setup
 ```
